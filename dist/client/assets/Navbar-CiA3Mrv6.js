@@ -1,0 +1,1 @@
+import{j as s,L as a}from"./index-DoPlaH1s.js";function e({current:r}){return s.jsxs("header",{className:"navbar",children:[s.jsx(a,{to:"/",className:"logo",children:s.jsx("img",{src:"logo.png",alt:"Logo",width:"50",height:"50"})}),s.jsx("nav",{className:"nav-links"})]})}export{e as N};
