@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { tanstackStart } from "@tanstack/start/plugin/vite";
+import { tanstackStart } from "@tanstack/start/vite";
 
 export default defineConfig({
   plugins: [
