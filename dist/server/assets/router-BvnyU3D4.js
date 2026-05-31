@@ -3,9 +3,9 @@ import { createRootRouteWithContext, useRouter, Link, Outlet, HeadContent, Scrip
 import { jsx, jsxs } from "react/jsx-runtime";
 import { useEffect } from "react";
 const appCss = "/assets/styles-DPxLSghs.css";
-function reportTEST appError(error, context = {}) {
+function reportTESTappError(error, context = {}) {
   if (typeof window === "undefined") return;
-  window.__TEST appEvents?.captureException?.(
+  window.__TESTappEvents?.captureException?.(
     error,
     {
       source: "react_error_boundary",
@@ -38,7 +38,7 @@ function ErrorComponent({ error, reset }) {
   console.error(error);
   const router2 = useRouter();
   useEffect(() => {
-    reportTEST appError(error, { boundary: "tanstack_root_error_component" });
+    reportTESTappError(error, { boundary: "tanstack_root_error_component" });
   }, [error]);
   return /* @__PURE__ */ jsx("div", { className: "flex min-h-screen items-center justify-center bg-background px-4", children: /* @__PURE__ */ jsxs("div", { className: "max-w-md text-center", children: [
     /* @__PURE__ */ jsx("h1", { className: "text-xl font-semibold tracking-tight text-foreground", children: "This page didn't load" }),
@@ -72,13 +72,13 @@ const Route$4 = createRootRouteWithContext()({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "TEST" },
-      { name: "description", content: "TEST app Generated Project" },
-      { name: "author", content: "TEST app" },
+      { name: "description", content: "TESTapp Generated Project" },
+      { name: "author", content: "TESTapp" },
       { property: "og:title", content: "TEST" },
-      { property: "og:description", content: "TEST app Generated Project" },
+      { property: "og:description", content: "TESTapp Generated Project" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@TEST app" }
+      { name: "twitter:site", content: "@TESTapp" }
     ],
     links: [
       {

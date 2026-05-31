@@ -1,26 +1,29 @@
-type TEST appErrorOptions = {
+type TESTAppErrorOptions = {
   mechanism?: "manual" | "onerror" | "unhandledrejection" | "react_error_boundary";
   handled?: boolean;
   severity?: "error" | "warning" | "info";
 };
 
-type TEST appEvents = {
+type TESTAppEvents = {
   captureException?: (
     error: unknown,
     context?: Record<string, unknown>,
-    options?: TEST appErrorOptions,
+    options?: TESTAppErrorOptions,
   ) => void;
 };
 
 declare global {
   interface Window {
-    __TEST appEvents?: TEST appEvents;
+    __TESTAppEvents?: TESTAppEvents;
   }
 }
 
-export function reportTEST appError(error: unknown, context: Record<string, unknown> = {}) {
+export function reportTESTAppError(
+  error: unknown,
+  context: Record<string, unknown> = {},
+) {
   if (typeof window === "undefined") return;
-  window.__TEST appEvents?.captureException?.(
+  window.__TESTAppEvents?.captureException?.(
     error,
     {
       source: "react_error_boundary",

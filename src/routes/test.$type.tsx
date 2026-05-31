@@ -13,8 +13,8 @@ import { encryptResult } from "@/utils/encrypt";
 
 export const Route = createFileRoute("/test/$type")({
   head: ({ params }) => ({
+    title: `${titles[params.type] ?? "Test"} — DevTest`,
     meta: [
-      { title: `${titles[params.type] ?? "Test"} — DevTest` },
       { name: "description", content: `Frontend amaliy test – ${titles[params.type] ?? "Test"}` },
     ],
   }),
@@ -34,6 +34,10 @@ function TestPage() {
   const { type } = Route.useParams();
   const navigate = useNavigate();
   const valid = !!sources[type];
+
+  useEffect(() => {
+    document.title = `${titles[type] ?? "Test"} — DevTest`;
+  }, [type]);
 
   const orderKey = `test_${type}_order`;
   const answersKey = `test_${type}_answers`;
