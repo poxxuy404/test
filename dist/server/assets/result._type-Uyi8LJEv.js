@@ -2,7 +2,7 @@ import { jsxs, Fragment, jsx } from "react/jsx-runtime";
 import { useState, useRef, useEffect } from "react";
 import { N as Navbar } from "./Navbar-AeEZ3lWq.js";
 import { d as decryptResult } from "./encrypt-DSOFwvtM.js";
-import { a as Route } from "./router-CSLBa8cF.js";
+import { a as Route } from "./router-BvnyU3D4.js";
 import "@tanstack/react-router";
 import "crypto-js";
 import "@tanstack/react-query";

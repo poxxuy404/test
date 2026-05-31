@@ -4,7 +4,7 @@ import { N as Navbar } from "./Navbar-AeEZ3lWq.js";
 import { d as decryptResult } from "./encrypt-DSOFwvtM.js";
 import "@tanstack/react-router";
 import "crypto-js";
-const ADMIN_PASSWORD = ">";
+const ADMIN_PASSWORD = "";
 function LoginScreen({
   onLogin
 }) {

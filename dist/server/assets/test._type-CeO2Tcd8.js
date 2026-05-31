@@ -3,7 +3,7 @@ import { useNavigate } from "@tanstack/react-router";
 import { useState, useEffect, useMemo, useCallback } from "react";
 import { N as Navbar } from "./Navbar-AeEZ3lWq.js";
 import { e as encryptResult } from "./encrypt-DSOFwvtM.js";
-import { R as Route } from "./router-CSLBa8cF.js";
+import { R as Route } from "./router-BvnyU3D4.js";
 import "crypto-js";
 import "@tanstack/react-query";
 function Timer({ deadline, onExpire }) {
@@ -186,15 +186,15 @@ const htmlQuestions = [
     id: 1,
     type: "mcq",
     topic: "HTML asoslari",
-    question: "HTML qisqartmasi nimani anglatadi?",
+    question: "UTF-8 nima uchun kerak?",
     options: [
-      "A) Hyper Text Markup Language",
-      "B) High Tech Modern Language",
-      "C) Hyper Transfer Markup Logic",
+      "A) Unicode kodlash usuli",
+      "B) HTML5 versiyasi",
+      "C) Veb-brauzer nomi",
       "D) Home Tool Markup Language"
     ],
     answer: "A",
-    hint: "HTML veb-sahifalar yaratish uchun ishlatiladigan belgilash tili.",
+    hint: "UTF-8 — Unicode uchun kodlash usuli, turli xil tillar uchun.",
     points: 4
   },
   {
@@ -337,7 +337,7 @@ const htmlQuestions = [
     id: 11,
     type: "truefalse",
     topic: "HTML asoslari",
-    question: "HTML — dasturlash tili hisoblanadi.",
+    question: "HTML — dasturlash tili hisoblanadi. [false xato degani true to'g'ri degani]",
     answer: false,
     hint: "HTML — belgilash tili (markup language), dasturlash tili emas.",
     points: 4
@@ -348,7 +348,7 @@ const htmlQuestions = [
     topic: "HTML teglar",
     question: "&lt;br&gt; tegi yangi qator yaratadi.",
     answer: true,
-    hint: "&lt;br&gt; — line break, matnni keyingi qatordan davom ettiradi.",
+    hint: "&lt;br&gt; — line break, matnni keyingi qatordan davom ettiradi. [false xato degani true to'g'ri degani]",
     points: 4
   },
   {
@@ -357,7 +357,7 @@ const htmlQuestions = [
     topic: "HTML tuzilishi",
     question: "&lt;!DOCTYPE html&gt; deklaratsiyasi &lt;html&gt; tegidan keyin yoziladi.",
     answer: false,
-    hint: "&lt;!DOCTYPE html&gt; — HTML faylning eng birinchi qatorida bo'lishi shart.",
+    hint: "&lt;!DOCTYPE html&gt; — HTML faylning eng birinchi qatorida bo'lishi shart. [false xato degani true to'g'ri degani]",
     points: 4
   },
   {
@@ -366,7 +366,7 @@ const htmlQuestions = [
     topic: "Atributlar",
     question: "&lt;a&gt; tegida target=&#39;_blank&#39; atributi havolani yangi tabda ochadi.",
     answer: true,
-    hint: "_blank — yangi tab yoki oyna ochadi.",
+    hint: "_blank — yangi tab yoki oyna ochadi. [false xato degani true to'g'ri degani]",
     points: 4
   },
   {
@@ -389,7 +389,7 @@ const htmlQuestions = [
       `<a href="https://google.com">Google</a>`,
       `<a href='https://google.com'>Google</a>`
     ],
-    hint: "&lt;a href=&#39;manzil&#39;&gt;Matn&lt;/a&gt; — havola yaratishning asosiy shakli.",
+    hint: 'href="https://google.com" — havola yaratishning asosiy shakli.',
     points: 4
   },
   {
@@ -441,15 +441,16 @@ const htmlQuestions = [
   },
   {
     id: 20,
-    type: "code",
+    type: "mcq",
     topic: "Formalar",
     question: "Ism kiritish uchun matn input yozing. placeholder='Ismingiz' bo'lsin.",
-    placeholder: "<!-- Input tegini shu yerga yozing -->",
-    accepted: [
-      `<input type="text" placeholder="Ismingiz">`,
-      `<input type="text" placeholder='Ismingiz'>`,
-      `<input type="text" name="ism" placeholder="Ismingiz">`
+    options: [
+      `A) <input type="text" placeholder='Ismingiz'>`,
+      `B) <input type="text" name="ism" placeholder="Ismingizmi">`,
+      `C) <input type="text" placeholder='Ismingiz'>`,
+      `D) <input type="text" name="ism" placeholder="Ismingiz">`
     ],
+    answer: "D",
     hint: "type='text' — oddiy matn kiritish uchun.",
     points: 4
   },
@@ -490,7 +491,7 @@ const htmlQuestions = [
     type: "fix",
     topic: "Rasm tegi",
     question: "Quyidagi kodda xato bor. Toping va to'g'irlang:",
-    brokenCode: `<img src="rasm.jpg alt="Rasm">`,
+    brokenCode: `<img src="rasm.jpg" alt="Rasm>`,
     accepted: [
       `<img src="rasm.jpg" alt="Rasm">`,
       `<img src="rasm.jpg" alt="Rasm" />`
