@@ -8,8 +8,11 @@
   ],
   "routes": [
     {
-      "src": "/client/(.*)",
-      "dest": "/dist/client/$1"
+      "handle": "filesystem"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/dist/client/assets/$1"
     },
     {
       "src": "/(.*)",
