@@ -12,6 +12,12 @@ import { scoreTest, type AnswerState } from "@/utils/score";
 import { encryptResult } from "@/utils/encrypt";
 
 export const Route = createFileRoute("/test/$type")({
+  head: ({ params }) => ({
+    meta: [
+      { title: `${titles[params.type] ?? "Test"} — DevTest` },
+      { name: "description", content: `Frontend amaliy test – ${titles[params.type] ?? "Test"}` },
+    ],
+  }),
   component: TestPage,
 });
 
