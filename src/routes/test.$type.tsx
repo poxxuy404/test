@@ -34,8 +34,10 @@ function TestPage() {
   const deadlineKey = `test_${type}_deadline`;
 
   const questions: Question[] = useMemo(() => {
-    if (!valid || typeof window === "undefined") return [];
+    if (!valid) return [];
     const src = sources[type];
+    if (!src) return [];
+    if (typeof window === "undefined") return src;
     try {
       const saved = localStorage.getItem(orderKey);
       if (saved) {
